@@ -13,9 +13,9 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     // (For your specific requirements `document.querySelectorAll(...)`
     //  should be equivalent to jquery's `$(...)`.)
     let imgs = document.querySelectorAll("img");
-    var combine = (image) => () => setTimeout(myFunction(image, window.style), 50);
+    var combine = (image,src) => () => ((image.src == src)?(myFunction(image, window.style)):"");
     for(img of imgs){
-      img.addEventListener("mouseover", combine(img));
+      img.addEventListener("mouseover", combine(img,(' ' + img.src).slice(1)));
     }
     //}
   }
@@ -40,12 +40,15 @@ function myFunction(image, style) {
       let resultImg = this.response;
       let url = URL.createObjectURL(resultImg);
       image.src = url;
+      setTimeout(()=>0,50);
     }
   };
 
   // Converting JSON data to string
   var data = JSON.stringify({ content: image.src, style: style });
 
+  image.src = chrome.extension.getURL("images/ChangeLyffe.png");
+  setTimeout(()=>0,50);
   // Sending data with the request
   xhr.send(data);
 
