@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="popup.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Lyffe Style</title>
+  </head>
+  <body class="rainbow">
+    <img src = "logo.png" />
+    <h5>Change your Lyffe Style to the Right Style</h5>
+    <p>Upload your style file:</p>
+    <div class="upload-btn-wrapper">
+      <button class="btn">Upload a file</button>
+      <input type="file" id="files" />
+    </div>
+
+    <br> <br>
+    <output id="submit_image">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Pablo_Picasso%2C_1910%2C_Girl_with_a_Mandolin_%28Fanny_Tellier%29%2C_oil_on_canvas%2C_100.3_x_73.6_cm%2C_Museum_of_Modern_Art_New_York..jpg/555px-Pablo_Picasso%2C_1910%2C_Girl_with_a_Mandolin_%28Fanny_Tellier%29%2C_oil_on_canvas%2C_100.3_x_73.6_cm%2C_Museum_of_Modern_Art_New_York..jpg" 
+      alt="style file" id="chosen_file" height="128" width="auto">
+    </output>
+
+    <div class="form__group field">
+      <input
+        type="input"
+        class="form__field"
+        placeholder="Name"
+        name="name"
+        id="name"
+        required
+      />
+      <label for="name" class="form__label">Link to style Image</label>
+    </div>
+
+    <div class="upload-btn-wrapper">
+      <button class="btn" id = "btn">Submit</button>
+    </div>
+    <p class = "hoverOver">Hover over images to style them</p>
+  </body>
+</html>
