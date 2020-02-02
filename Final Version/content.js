@@ -15,7 +15,9 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     let imgs = document.querySelectorAll("img");
     var combine = (image,src) => () => ((image.src == src)?(myFunction(image, window.style)):"");
     for(img of imgs){
-      img.addEventListener("mouseover", combine(img,(' ' + img.src).slice(1)));
+      if(img.src.slice(0,4) !== "blob"){
+        img.addEventListener("mouseover", combine(img,(' ' + img.src).slice(1)));
+      }
     }
     //}
   }
