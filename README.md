@@ -17,3 +17,5 @@ Lyyfe Style is a chrome extension that partners with a flask server to style ima
 * **Kaleb Sverdrup** - *general work* - [WeaselWonka](https://github.com/WeaselWonka)
 
 * **Skylar Hoffman** - *general work* - [sky121](https://github.com/sky121)
+
+* **Jacob Huang** - *front end* - [jacobjh1](https://github.com/jacobjh1)
