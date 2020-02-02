@@ -32,4 +32,4 @@ Lyyfe Style is a chrome extension that partners with a flask server to style ima
 
 * **Jacob Huang** - *front end* - [jacobjh1](https://github.com/jacobjh1)
 
-* **Jacob Huang** - *front end* - [jinfwl13](https://github.com/jinfwl13)
+* **Jacob Huang** - *front end* - [jingwl13](https://github.com/JingleOne)
