@@ -14,3 +14,5 @@ Add additional notes about how to deploy this on a live system
 ## Authors
 
 * **Kaleb Sverdrup** - *general work* - [WeaselWonka](https://github.com/WeaselWonka)
+
+* **Skylar Hoffman** - *general work* - [sky121](https://github.com/sky121)
