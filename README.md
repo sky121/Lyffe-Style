@@ -1,23 +1,23 @@
 # Lyffe Style
 
-Lyyfe Style is a chrome extension that partners with a flask server to style images in your browser using neural style transfer. Clicking on the chrome extension in the top right of your browser will bring up a popup that allows you to enter in an image url you would like to use as a style, with Pablo Picasso's *Girl with a Mandolin* as a default. After you have clicked the popup dragging over an image will start the process of transforming it's style.
+Lyyfe Style is a Chrome extension that partners with a Flask server to style images in your browser using neural style transfer. Clicking on the Chrome extension in the top right of your browser will bring up a popup that allows you to enter in an image url you would like to use as a style, with Pablo Picasso's *Girl with a Mandolin* as a default. After you have clicked the popup dragging over an image will start the process of transforming it's style.
 
 ## Deployment
 
 ### Flask server
-1. install Python 3.7 (earlier versions may work but have not been tested)
-2. use pip to install the following: tensorflow, tensorflow_hub, keras, Pillow, flask, flask_cors (*python3 -m pip install "module name"*)
-3. in command prompt make your current directory .../Lyffe-Style-Flask-Server/FlaskStyleTransfer/
-4. run the command *python3 -m flask run*
-- Note: If you are on a mac and your server crashes due to an URL fetch error, go to your python3.7 folder in applications and run the
-"install Certificates.command" file  
+1. Install Python 3.7 (earlier versions may work but have not been tested)
+2. Use pip to install the following: tensorflow, tensorflow_hub, keras, Pillow, flask, flask_cors (*python3 -m pip install "module name"*)
+3. In command prompt make your current directory .../Lyffe-Style-Flask-Server/FlaskStyleTransfer/
+4. Run the command *python3 -m flask run*
+- Note: If you are on a Mac and your server crashes due to an URL fetch error, go to your python3.7 folder in applications and run the
+"install Certificates.command" file (make sure you have admin permissions)
 
 ### Chrome extension
-1. open up google chrome
-2. go to the link chrome://extensions/
-3. toggle on developer mode, in the top right corner, if not already done
-4. click on the Load Unpacked button and select the folder Final Version
-5. click the update button
+1. Open up Google Chrome
+2. Go to the link chrome://extensions/
+3. Toggle on developer mode, in the top right corner, if not already done
+4. Click on the Load Unpacked button and select the folder Final Version
+5. Click the update button
 
 ## Built With
 
