@@ -17,6 +17,7 @@ Lyyfe Style is a chrome extension that partners with a flask server to style ima
 2. go to the link chrome://extensions/
 3. toggle on developer mode, in the top right corner, if not already done
 4. click on the Load Unpacked button and select the folder Final Version
+5. click the update button
 
 ## Built With
 
@@ -31,4 +32,4 @@ Lyyfe Style is a chrome extension that partners with a flask server to style ima
 
 * **Jacob Huang** - *front end* - [jacobjh1](https://github.com/jacobjh1)
 
-* **Jacob Huang** - *front end* - [jinfwl13](https://github.com/jacobjh1)
+* **Jacob Huang** - *front end* - [jinfwl13](https://github.com/jinfwl13)
