@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Test Extension",
+  "name": "Lyffe Style",
   "version": "0.0",
   "offline_enabled": true,
 
@@ -20,6 +20,7 @@
   "web_accessible_resources": ["images/*"],
   "page_action": {
     "default_title": "Test Extension",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "Lyffe.png"
   }
 }
