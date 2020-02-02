@@ -1,6 +1,7 @@
 body {
-  width: 800px;
-  height: 500px;
+  width: 400px;
+  height: 600px;
+
   text-align: center;
   position: relative;
   margin-left: 50%;
@@ -27,7 +28,17 @@ body {
 
   color: white;
 }
-
+body p {
+  font-size: 190%;
+}
+body .hoverOver {
+  font-size: 200%;
+  -webkit-animation: color-change 1s infinite;
+  -moz-animation: color-change 1s infinite;
+  -o-animation: color-change 1s infinite;
+  -ms-animation: color-change 1s infinite;
+  animation: color-change 1s infinite;
+}
 .fileI {
   margin-left: 10%;
 }
@@ -141,7 +152,8 @@ body img {
   font-size: 1rem;
   color: #ffffff;
   text-align: center;
-  margin-left: 9%;
+  margin-left: -50%;
+  width: 200px;
 }
 
 .form__field:focus {
@@ -156,3 +168,58 @@ body img {
   box-shadow: none;
 }
 /* demo */
+@-webkit-keyframes color-change {
+  0% {
+    color: #5af26b;
+  }
+  50% {
+    color: #5fdcf5;
+  }
+  100% {
+    color: #5af26b;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: #5af26b;
+  }
+  50% {
+    color: #5fdcf5;
+  }
+  100% {
+    color: #5af26b;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    color: #5af26b;
+  }
+  50% {
+    color: #5fdcf5;
+  }
+  100% {
+    color: #5af26b;
+  }
+}
+@-o-keyframes color-change {
+  0% {
+    color: #5af26b;
+  }
+  50% {
+    color: #5fdcf5;
+  }
+  100% {
+    color: #5af26b;
+  }
+}
+@keyframes color-change {
+  0% {
+    color: #5af26b;
+  }
+  50% {
+    color: #5fdcf5;
+  }
+  100% {
+    color: #5af26b;
+  }
+}
