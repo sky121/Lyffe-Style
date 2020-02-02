@@ -4,7 +4,7 @@ Lyyfe Style is a chrome extension that partners with a flask server to style ima
 
 ## Deployment
 
-###Flask server
+### Flask server
 1. install Python 3.7 (earlier versions may work but have not been tested)
 2. use pip to install the following: tensorflow, tensorflow_hub, keras, Pillow, flask, flask_cors (*python3 -m pip install "module name"*)
 3. in command prompt make your current directory .../Lyffe-Style-Flask-Server/FlaskStyleTransfer/
