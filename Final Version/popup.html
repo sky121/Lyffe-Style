@@ -8,11 +8,28 @@
   <body class="rainbow">
     <h5>Change your Lyffe Style to the Right Style</h5>
     <p>Upload your style file:</p>
-    <input type="file" id="files" />
+    <div class="upload-btn-wrapper">
+      <button class="btn">Upload a file</button>
+      <input type="file" name="files" />
+    </div>
+
     <output id="submit_image"></output>
     <p>Or Link your style Image:</p>
-    <input type="text" />
-    <button>Submit</button>
+    <div class="form__group field">
+      <input
+        type="input"
+        class="form__field"
+        placeholder="Name"
+        name="name"
+        id="name"
+        required
+      />
+      <label for="name" class="form__label">Link to style Image</label>
+    </div>
+
+    <div class="upload-btn-wrapper">
+      <button class="btn">Submit</button>
+    </div>
     <p>Hover over images to style them</p>
   </body>
 </html>
