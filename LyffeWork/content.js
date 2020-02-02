@@ -1,17 +1,28 @@
+
+var style = "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Pablo_Picasso%2C_1910%2C_Girl_with_a_Mandolin_%28Fanny_Tellier%29%2C_oil_on_canvas%2C_100.3_x_73.6_cm%2C_Museum_of_Modern_Art_New_York..jpg/555px-Pablo_Picasso%2C_1910%2C_Girl_with_a_Mandolin_%28Fanny_Tellier%29%2C_oil_on_canvas%2C_100.3_x_73.6_cm%2C_Museum_of_Modern_Art_New_York..jpg";
+
+
 chrome.runtime.sendMessage({
   from: "content",
-  subject: "showPageAction"
+  subject: "showPageAction",
+  src: window.style
 });
 // Listen for messages from the popup.
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
   // First, validate the message's structure.
   if (msg.from === "popup" && msg.subject === "DOMInfo") {
+    chrome.runtime.sendMessage({
+      from: "content",
+      subject: "showPageAction",
+      src: window.style
+    });
     // Collect the necessary data.
     // (For your specific requirements `document.querySelectorAll(...)`
     //  should be equivalent to jquery's `$(...)`.)
     let imgs = document.querySelectorAll("img");
     let tempImg = chrome.extension.getURL("images/ChangeLyffe.png");
-    var combine = (image,src) => () => ((image.src == src)?(myFunction(image, chrome.storage.sync.get(['data']))):"");
+
+    var combine = (image,src) => () => ((image.src == src)?(myFunction(image)):"");
     for(img of imgs){
       if(img.src.slice(0,4) !== "blob" && img.src !== tempImg){
         img.addEventListener("mouseover", combine(img,(' ' + img.src).slice(1)));
@@ -19,9 +30,14 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     }
     //}
   }
+  else
+  {
+    console.log("Changed Source!!!");
+    window.style = msg.src;
+  }
 });
 
-function myFunction(image, style) {
+function myFunction(image) {
   // Creating a XHR object
   let xhr = new XMLHttpRequest();
   let url = "http://127.0.0.1:5000/postmethod";
@@ -45,7 +61,7 @@ function myFunction(image, style) {
   };
 
   // Converting JSON data to string
-  var data = JSON.stringify({ content: image.src, style: style });
+  var data = JSON.stringify({ content: image.src, style: window.style });
 
   image.src = chrome.extension.getURL("images/ChangeLyffe.png");
   setTimeout(()=>0,50);
