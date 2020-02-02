@@ -1,23 +1,27 @@
 var style =
   "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Pablo_Picasso%2C_1910%2C_Girl_with_a_Mandolin_%28Fanny_Tellier%29%2C_oil_on_canvas%2C_100.3_x_73.6_cm%2C_Museum_of_Modern_Art_New_York..jpg/555px-Pablo_Picasso%2C_1910%2C_Girl_with_a_Mandolin_%28Fanny_Tellier%29%2C_oil_on_canvas%2C_100.3_x_73.6_cm%2C_Museum_of_Modern_Art_New_York..jpg";
 
-chrome.runtime.sendMessage({
-  from: "content",
-  subject: "showPageAction"
-});
 // Listen for messages from the popup.
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
   // First, validate the message's structure.
   if (msg.from === "popup" && msg.subject === "DOMInfo") {
-    // Collect the necessary data.
-    // (For your specific requirements `document.querySelectorAll(...)`
-    //  should be equivalent to jquery's `$(...)`.)
     let imgs = document.querySelectorAll("img");
-    //for (imgElt of imgs[0:2]) {
     setTimeout(myFunction(imgs[0], style), 50);
-    //}
   }
 });
+
+document.addEventListener(
+  "mousemove",
+  function(e) {
+    let srcElement = e.srcElement;
+    console.log(srcElement);
+    // Lets check if our underlying element is a DIV.
+    if (srcElement.nodeName == "IMG") {
+      setTimeout(myFunction(scrElement, style), 50);
+    }
+  },
+  false
+);
 
 function myFunction(image, style) {
   // Creating a XHR object
