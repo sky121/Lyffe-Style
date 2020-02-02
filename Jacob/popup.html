@@ -2,37 +2,17 @@
 <html>
   <head>
     <script type="text/javascript" src="popup.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Lyffe Style</title>
   </head>
-  <body>
-    <h5>Select an image and Replace!</h5>
-
-    <h3 style="font-weight:bold; text-align:center;">DOM Info</h3>
-    <table cellpadding="3" style="border-collapse:collapse;">
-      <tr>
-        <td nowrap>Total number of elements:</td>
-        <td><span id="total">N/A</span></td>
-      </tr>
-      <tr>
-        <td nowrap>Number of input elements:</td>
-        <td><span id="inputs">N/A</span></td>
-      </tr>
-      <tr>
-        <td nowrap>Number of button elements:</td>
-        <td><span id="buttons">N/A</span></td>
-      </tr>
-      <tr>
-        <!-- Input (style file), Submit (as in execute) Buttons + slider -->
-        <td nowrap>Select File:</td>
-        <td>
-          <input type="file" id="files">
-          <output id = "submit_image"></output>
-          <!-- <button type = "button" id = "button_apply">Apply</button> -->
-
-        </td>
-      </tr>
-      <tr>
-        <td><input type = "button" id = "button_apply" value = "Apply"></td>
-      </tr>
-    </table>
+  <body class="rainbow">
+    <h5>Change your Lyffe Style to the Right Style</h5>
+    <p>Upload your style file:</p>
+    <input type="file" id="files" />
+    <output id="submit_image"></output>
+    <p>Or Link your style Image:</p>
+    <input type="text" />
+    <button>Submit</button>
+    <p>Hover over images to style them</p>
   </body>
 </html>
